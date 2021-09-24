@@ -1,0 +1,39 @@
+name: Single artefact customer-common
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+    inputs:
+      tenant:
+        description: 'some name'
+        required: true
+        default: 'roadie'
+      environment:
+        description: 'environment to use as a custom plugin source'
+        required: false
+        default: 'dev'
+      cluster:
+        description: 'Cluster name'
+        required: false
+        default: 'my-cluster'
+      build_backend:
+        required: false
+        default: 'false'
+      package:
+        default: 'package1'
+        required: false
+jobs:
+  publish_single_artifact:
+    runs-on: ubuntu-latest
+
+    env:
+      DEFAULT_TENANT_NAME: roadie
+    steps:
+      - run: echo "TENANT_NAME=${{ github.event.inputs.tenant || env.DEFAULT_TENANT_NAME }}" >> $GITHUB_ENV
+      - run: echo "ENV=${{ github.event.inputs.environment || 'dev' }}" >> $GITHUB_ENV
+      - run: echo "CLUSTER=${{ github.event.inputs.cluster || 'my-cluster' }}" >> $GITHUB_ENV
+      - run: echo "PACKAGE=#${{ env.TENANT_NAME }}" >> $GITHUB_ENV
+
