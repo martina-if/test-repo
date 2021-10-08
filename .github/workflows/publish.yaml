@@ -25,6 +25,8 @@ on:
       package:
         default: 'package1'
         required: false
+  check_run:
+    types: [requested_action]
 jobs:
   publish_single_artifact:
     runs-on: ubuntu-latest
