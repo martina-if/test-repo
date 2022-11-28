@@ -31,13 +31,4 @@ spec:
   type: service
   owner: user/martina
   lifecycle: experimental
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: componentC
-  description: This component will be deleted and should be orphaned
-spec:
-  type: service
-  owner: user/martina
-  lifecycle: experimental
+
