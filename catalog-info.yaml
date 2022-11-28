@@ -9,3 +9,15 @@ spec:
   type: service
   owner: user/martina
   lifecycle: experimental
+----
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: martina-service-renamed-again
+  annotations:
+    github.com/project-slug: martina-if/test-repo
+  description: This is the renamed-again component in a different repo
+spec:
+  type: service
+  owner: user/martina
+  lifecycle: experimental
