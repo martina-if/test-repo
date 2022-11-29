@@ -25,7 +25,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: componentB
+  name: componentA
   description: This is the renamed-again component in a different repo
 spec:
   type: service
