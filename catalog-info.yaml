@@ -31,3 +31,13 @@ spec:
   type: service
   owner: user/martina
   lifecycle: experimental
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: C5
+  description: This is for scenario 5
+spec:
+  type: service
+  owner: user/martina
+  lifecycle: experimental
