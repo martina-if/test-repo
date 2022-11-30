@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: comp-case-7
+  annotations:
+    github.com/project-slug: martina-if/test-repo
+  description: A test component that represents a repo
+spec:
+  type: service
+  owner: user/martina
+  lifecycle: experimental
