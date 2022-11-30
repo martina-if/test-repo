@@ -31,4 +31,3 @@ spec:
   type: service
   owner: user/martina
   lifecycle: experimental
-
