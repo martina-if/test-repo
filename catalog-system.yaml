@@ -1,9 +1,8 @@
-
 apiVersion: backstage.io/v1alpha1
 kind: System
 metadata:
   name: martina-system
   description: A test system
 spec:
-  # type: service
+  type: service
   owner: user/martina
