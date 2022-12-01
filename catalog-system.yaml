@@ -4,7 +4,7 @@ metadata:
   name: martina-system
   description: A test system
 spec:
-  type: service
+  type: supersystem
   owner: user/martina
 ---
 apiVersion: backstage.io/v1alpha1
